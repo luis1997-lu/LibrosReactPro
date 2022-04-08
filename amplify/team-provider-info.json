@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-libors2-dev-202415-authRole",
+      "UnauthRoleArn": "arn:aws:iam::362608967864:role/amplify-libors2-dev-202415-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::362608967864:role/amplify-libors2-dev-202415-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-libors2-dev-202415-deployment",
+      "UnauthRoleName": "amplify-libors2-dev-202415-unauthRole",
+      "StackName": "amplify-libors2-dev-202415",
+      "StackId": "arn:aws:cloudformation:us-east-2:362608967864:stack/amplify-libors2-dev-202415/720e1eb0-b611-11ec-899e-027d7ce82024",
+      "AmplifyAppId": "da0p5v9ko2s3y"
+    },
+    "categories": {
+      "auth": {
+        "libors279b7ff56": {}
+      }
+    }
+  }
+}
