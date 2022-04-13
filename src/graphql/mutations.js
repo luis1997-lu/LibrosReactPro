@@ -1,3 +1,6 @@
+/* eslint-disable */
+// this is an auto generated file. This will be overwritten
+
 export const createTodo = /* GraphQL */ `
   mutation CreateTodo(
     $input: CreateTodoInput!
@@ -6,6 +9,7 @@ export const createTodo = /* GraphQL */ `
     createTodo(input: $input, condition: $condition) {
       id
       titulo
+      status
       description
       autor
       isbn
@@ -22,6 +26,7 @@ export const updateTodo = /* GraphQL */ `
     updateTodo(input: $input, condition: $condition) {
       id
       titulo
+      status
       description
       autor
       isbn
@@ -38,6 +43,7 @@ export const deleteTodo = /* GraphQL */ `
     deleteTodo(input: $input, condition: $condition) {
       id
       titulo
+      status
       description
       autor
       isbn
