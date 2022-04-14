@@ -6,10 +6,13 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { GlobalContext } from "../context/global/global.context";
+
 import Home from "../pag/home";
 import Settings from "../pag/settings";
-import Actualizar from "../pag/actualizar";
 import Crear from "../pag/crear";
+import { nav } from "aws-amplify";
+
+
 const options = ({route}) => ({
     tabBarIcon: ({focused, color, size}) =>{
       let iconName;
@@ -37,18 +40,17 @@ const Stack = createNativeStackNavigator();
 
 export default function MainNavigator({}){
   const { logout, userInfo } = useContext(GlobalContext);
-  
     return(
-        <NavigationContainer>
-           <Tab.Navigator screenOptions={options}>
+        <NavigationContainer >
+          <Tab.Navigator screenOptions={options}>
                 <Tab.Screen name="Home" 
                 children={(props) => (<Home />)} />
                 <Tab.Screen name="Settings" 
-                children={(props) => (<Settings onPress={logout} state={userInfo}/>) } />
-                
-                <Tab.Screen name="Crear" component={Crear} />
+                children={(props) => (<Settings onPress={logout} state={userInfo}/>) } /> 
+                <Tab.Screen name="Crear" component={Crear} iconName = "book" />
            </Tab.Navigator>
            
         </NavigationContainer>
     )
 }
+

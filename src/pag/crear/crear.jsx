@@ -1,6 +1,9 @@
 import React,{useEffect,useState} from "react";
-import { View,TextInput,Button } from "react-native";
+import { View,TextInput,Button,StyleSheet} from "react-native";
 import { onCrear, crear } from "../../services/servicesLibros";
+import { styles } from "./crear.style";
+
+
 
 export default function Crear({}) {
   const [libros, setLibros] = useState({
@@ -17,7 +20,7 @@ export default function Crear({}) {
   
 
   const onLibroCreated = () => {
-      console.log("Se ha creado un libro");
+      console.log("Librio Creado");
   }
 
   useEffect(() => {
@@ -30,36 +33,38 @@ export default function Crear({}) {
     };
   });
   return (
-  <View>
-    <TextInput
+  <View style = {styles.container}>
+    <TextInput style = {styles.TextInput}
        onChangeText={(text) => {
         setLibros((current) => ({ ...current, titulo: text }));
       }} 
       placeholder="Nombre" />
-    <TextInput
+    <TextInput style = {styles.TextInput}
     onChangeText={(text) => {
       setLibros((current) => ({ ...current, status: text }));
     }}  
     placeholder="status" />
-    <TextInput
+    <TextInput style = {styles.TextInput}
     onChangeText={(text) => {
       setLibros((current) => ({ ...current, description: text }));
     }} 
     placeholder="descripcion" />
-    <TextInput
+    <TextInput style = {styles.TextInput}
     onChangeText={(text) => {
       setLibros((current) => ({ ...current, isbn: text }));
     }} 
     placeholder="isbn" />
-     <TextInput
+     <TextInput style = {styles.TextInput}
     onChangeText={(text) => {
       setLibros((current) => ({ ...current, autor: text }));
     }} 
     placeholder="Autor" />
-    <Button
+    <Button style = {styles.button}
       title={"Guardar Libro"}
       onPress={anadirLibro}
     />
   </View>
   )
 }
+
+
